@@ -10,12 +10,9 @@ def sort_wordle_history(filename):
     with open(filename, 'w') as file:
         file.writelines(lines)
         
-def main():
-    wordle_input = input("Enter the Wordle of the day: ")
-    if wordle_input:
-        append_wordle_to_file(wordle_input, 'wordlehistory.txt')
-        sort_wordle_history('wordlehistory.txt')
-        print("Wordle successfully added to the history!")
+wordle_input = input("Enter the Wordle of the day: ")
+if wordle_input:
+    append_wordle_to_file(wordle_input, 'wordlehistory.txt')
+    sort_wordle_history('wordlehistory.txt')
+    print("Wordle successfully added to the history!")
 
-if __name__ == "__main__":
-    main()
